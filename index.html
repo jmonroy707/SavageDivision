@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savage Division | Heavy Athletics & Apparel</title>
     <style>
-        /* Import the Bebas Neue Heavyweight Font */
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
         :root {
@@ -136,25 +135,43 @@
             border-color: var(--accent-red);
         }
 
-        /* Flagship Card Highlight */
         .card.flagship {
             border: 2px solid var(--accent-red);
             background: linear-gradient(180deg, #161010 0%, var(--card-bg) 100%);
         }
 
-        .image-placeholder {
+        /* Front/Back Image Hover CSS */
+        .image-container {
+            position: relative;
             width: 100%;
-            height: 300px;
+            height: 350px;
             background-color: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 1.5rem;
-            color: #666;
-            font-family: monospace;
-            border: 1px dashed #333;
-            text-align: center;
-            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid #222;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .image-container .back-img {
+            opacity: 0;
+        }
+
+        .card:hover .back-img {
+            opacity: 1;
+        }
+
+        .card:hover .front-img {
+            opacity: 0;
         }
 
         .card h3 {
@@ -248,90 +265,85 @@
         <h2>Control the Controllables.</h2>
         <p>Built for the people fighting to take control of their lives. We provide heavy-duty apparel to anchor your daily work. The grind is on you.</p>
     </section>
-  
-    <section class="mission-section">
-        <h2 class="section-title">The Anchor</h2>
-        <div class="mission-content">
-            <p>At Savage Division, we know that motivation is a myth. When life gets chaotic, discipline is the only thing that keeps you anchored. We didn't build this brand for fitness influencers. <strong>We built it for the people fighting to take control of their lives.</strong></p>
-            
-            <p>For the ones balancing late shifts, heavy coursework, and a family, the gym isn't just about looking good; it's the daily anchor. Prepping your meals isn't just a diet; it's a non-negotiable routine that keeps your week from falling apart.</p>
-            
-            <p>We don't sell shortcuts. We sell the tools of discipline. We provide the heavy-duty gear. <strong>The work is on you.</strong></p>
-        </div>
-    </section>
 
     <section class="products-section">
-        <h2 class="section-title">Flagship Release</h2>
+        <h2 class="section-title">Drop 01: The Flagships</h2>
         
         <div class="grid">
+            <!-- Unisex Max Heavyweight Tee -->
             <div class="card flagship">
-                <div class="badge-coming">In Prototype Testing • Drop 01</div>
-                <div class="image-placeholder">[Prototype Mockup: High-Yoke Back Graphic]</div>
-                <h3>Heavyweight Pump Cover</h3>
+                <div class="badge-coming">Prototype Phase • Drop 01</div>
+                
+                <div class="image-container">
+                    <!-- The front image loads first, back image fades in on hover -->
+                    <img src="mens-tee-front.png" alt="Front Mockup" class="front-img">
+                    <img src="mens-tee-back.png" alt="Back Mockup" class="back-img">
+                </div>
+
+                <h3>Max Heavyweight Pump Cover</h3>
                 <div class="drop-status">STATUS: DIALING IN THE FIT</div>
-                <p class="description">The classic oversized boxy fit. Thick, heavy-weight cotton built with a high-yoke shoulder graphic. Dialed in through strict prototype testing before production.</p>
+                <p class="description">The classic oversized boxy fit. Thick, heavy-weight cotton built with a high-yoke shoulder graphic. Available in Black, Hunter Green, Charcoal Grey, and Cardinal.</p>
                 <ul class="features">
-                    <li>Ultra-Heavyweight Streetwear Blank</li>
-                    <li>High-Yoke Shoulder Placement Graphic</li>
+                    <li>Unisex Shaka Wear SHMHSS Blank</li>
+                    <li>High-Yoke Panther Shield Graphic</li>
                     <li>Custom Savage Division Build</li>
                 </ul>
                 <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
             </div>
-        </div>
 
-        <h2 class="section-title" style="margin-top: 4rem;">The Extended Arsenal (Coming Later)</h2>
-        
-        <div class="grid">
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Iron Division 10mm Lever Belt</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Built to handle the heaviest loads. Lock in your core and protect your spine when you're moving serious weight.</p>
+            <!-- Unisex Pique Gym Shorts -->
+            <div class="card flagship">
+                <div class="badge-coming">Prototype Phase • Drop 01</div>
+                <div class="image-container">
+                    <img src="mens-shorts.png" alt="Men's Shorts" class="front-img" style="opacity: 1;">
+                </div>
+                <h3>Heavy Pique Gym Shorts</h3>
+                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
+                <p class="description">Vintage-weight cotton pique built for heavy iron. Tactical 'SD' branding on the left leg to match the pump cover.</p>
                 <ul class="features">
-                    <li>IPF-approved competition specs</li>
-                    <li>Rapid-locking matte steel lever</li>
-                    <li>Premium double suede finish</li>
+                    <li>American Apparel 2PQ Blank</li>
+                    <li>Breathable Heavyweight Texture</li>
+                    <li>Tactical 'SD' Monogram</li>
                 </ul>
-                <div class="btn-disabled">Coming Soon</div>
+                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
             </div>
 
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Death-Grip Figure 8 Straps</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Don't let your grip fail before your back does. These literally tie you to the bar so you can pull until failure.</p>
+            <!-- Women's Flagship Crop -->
+            <div class="card flagship">
+                <div class="badge-coming">Prototype Phase • Drop 01</div>
+                
+                <div class="image-container">
+                    <!-- Hover to see back graphic -->
+                    <img src="womens-crop-front.png" alt="Front Mockup" class="front-img">
+                    <img src="womens-crop-back.png" alt="Back Mockup" class="back-img">
+                </div>
+
+                <h3>Faded Heavy Crop Tee</h3>
+                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
+                <p class="description">A structured, garment-dyed combed cotton crop that drapes perfectly. Minimal front 'SD' branding with the massive Chain-Link Medusa crest on the back.</p>
                 <ul class="features">
-                    <li>1,000+ lb weight capacity rating</li>
-                    <li>Thick, reinforced cotton webbing</li>
-                    <li>Locks instantly, no wrap time</li>
+                    <li>Women's AS Colour 4062F Blank</li>
+                    <li>Boxy Streetwear Crop Silhouette</li>
+                    <li>Chain-Link Medusa Back Graphic</li>
                 </ul>
-                <div class="btn-disabled">Coming Soon</div>
+                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
             </div>
 
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Tactical Steel Shaker (25oz)</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Stop using cheap plastic that stinks after one week. Ice-cold hydration that survives getting thrown across the gym floor.</p>
+            <!-- Women's Flagship Shorts -->
+            <div class="card flagship">
+                <div class="badge-coming">Prototype Phase • Drop 01</div>
+                <div class="image-container">
+                    <img src="womens-shorts.png" alt="Women's Shorts" class="front-img" style="opacity: 1;">
+                </div>
+                <h3>Interval 3" Compression Short</h3>
+                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
+                <p class="description">Built to survive the squat test. Maximum opacity heavy compression blend featuring tactical 'SD' branding on the left thigh.</p>
                 <ul class="features">
-                    <li>24-hour ice cold vacuum insulation</li>
-                    <li>Odor-proof, kitchen-grade steel</li>
-                    <li>Built-in vortex mixer</li>
+                    <li>Women's Sport-Tek LST475 Blank</li>
+                    <li>100% Opaque Squat-Proof Poly/Spandex</li>
+                    <li>Flatlock Seams for Zero Blowout</li>
                 </ul>
-                <div class="btn-disabled">Coming Soon</div>
-            </div>
-
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Week-at-a-Glance Glass Prep</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Preparation dictates execution. Lock in your macros with heavy-duty glass that won't warp or leak in your bag.</p>
-                <ul class="features">
-                    <li>Massive 35oz capacity</li>
-                    <li>Airtight, leak-proof snap lids</li>
-                    <li>Oven, microwave, and dishwasher safe</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon</div>
+                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
             </div>
         </div>
     </section>
