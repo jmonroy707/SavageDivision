@@ -140,12 +140,12 @@
             background: linear-gradient(180deg, #161010 0%, var(--card-bg) 100%);
         }
 
-        /* Front/Back Image Hover CSS */
+        /* Front/Back Image Hover CSS with Contain Fix */
         .image-container {
             position: relative;
             width: 100%;
             height: 350px;
-            background-color: #1a1a1a;
+            background-color: #ffffff; /* Provides a clean white backdrop for the mockups */
             margin-bottom: 1.5rem;
             border-radius: 4px;
             border: 1px solid #222;
@@ -155,7 +155,7 @@
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Prevents the image from zooming and cropping */
             position: absolute;
             top: 0;
             left: 0;
@@ -172,6 +172,21 @@
 
         .card:hover .front-img {
             opacity: 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #666;
+            font-family: monospace;
+            border: 1px dashed #333;
+            text-align: center;
+            padding: 1rem;
         }
 
         .card h3 {
@@ -267,7 +282,9 @@
     </section>
 
     <section class="products-section">
-        <h2 class="section-title">Drop 01: The Flagships</h2>
+        
+        <!-- The Panther Capsule -->
+        <h2 class="section-title">The Panther Capsule</h2>
         
         <div class="grid">
             <!-- Unisex Max Heavyweight Tee -->
@@ -275,7 +292,6 @@
                 <div class="badge-coming">Prototype Phase • Drop 01</div>
                 
                 <div class="image-container">
-                    <!-- The front image loads first, back image fades in on hover -->
                     <img src="mens-tee-front.png" alt="Front Mockup" class="front-img">
                     <img src="mens-tee-back.png" alt="Back Mockup" class="back-img">
                 </div>
@@ -307,13 +323,17 @@
                 </ul>
                 <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
             </div>
+        </div>
 
+        <!-- The Medusa Capsule -->
+        <h2 class="section-title" style="margin-top: 5rem;">The Medusa Capsule</h2>
+        
+        <div class="grid">
             <!-- Women's Flagship Crop -->
             <div class="card flagship">
                 <div class="badge-coming">Prototype Phase • Drop 01</div>
                 
                 <div class="image-container">
-                    <!-- Hover to see back graphic -->
                     <img src="womens-crop-front.png" alt="Front Mockup" class="front-img">
                     <img src="womens-crop-back.png" alt="Back Mockup" class="back-img">
                 </div>
@@ -344,6 +364,37 @@
                     <li>Flatlock Seams for Zero Blowout</li>
                 </ul>
                 <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
+            </div>
+        </div>
+
+        <!-- Hard Gear Section -->
+        <h2 class="section-title" style="margin-top: 5rem;">The Extended Arsenal (Coming Later)</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="image-placeholder">[Coming Soon]</div>
+                <h3>Iron Division 10mm Lever Belt</h3>
+                <div class="drop-status">STATUS: R&amp;D PHASE</div>
+                <p class="description">Built to handle the heaviest loads. Lock in your core and protect your spine when you're moving serious weight.</p>
+                <ul class="features">
+                    <li>IPF-approved competition specs</li>
+                    <li>Rapid-locking matte steel lever</li>
+                    <li>Premium double suede finish</li>
+                </ul>
+                <div class="btn-disabled">Coming Soon</div>
+            </div>
+
+            <div class="card">
+                <div class="image-placeholder">[Coming Soon]</div>
+                <h3>Death-Grip Figure 8 Straps</h3>
+                <div class="drop-status">STATUS: R&amp;D PHASE</div>
+                <p class="description">Don't let your grip fail before your back does. These literally tie you to the bar so you can pull until failure.</p>
+                <ul class="features">
+                    <li>1,000+ lb weight capacity rating</li>
+                    <li>Thick, reinforced cotton webbing</li>
+                    <li>Locks instantly, no wrap time</li>
+                </ul>
+                <div class="btn-disabled">Coming Soon</div>
             </div>
         </div>
     </section>
