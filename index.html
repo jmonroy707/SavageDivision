@@ -1,437 +1,1339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savage Division | Heavy Athletics & Apparel</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta
+    name="description"
+    content="Savage Division makes heavy-duty training apparel for people who control the controllables. Join the Drop 01 early-access list."
+  >
+  <meta property="og:title" content="Savage Division | Heavy Athletics & Apparel">
+  <meta
+    property="og:description"
+    content="Heavy-duty training apparel. Built for discipline, not motivation."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://savagedivision.com/">
+  <title>Savage Division | Heavy Athletics & Apparel</title>
 
-        :root {
-            --bg-color: #050505;
-            --text-color: #f4f4f4;
-            --accent-red: #8b0000;
-            --card-bg: #111;
-            --tactical-gray: #2a2a2a;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Savage Division",
+    "url": "https://savagedivision.com/",
+    "description": "Heavy athletics and apparel built around discipline.",
+    "email": "hello@savagedivision.com"
+  }
+  </script>
 
-        header {
-            background-color: #000;
-            padding: 2.5rem 5% 1.5rem 5%;
-            border-bottom: 1px solid var(--tactical-gray);
-            text-align: center;
-        }
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0d0d0d;
+      --surface-raised: #141414;
+      --line: #2b2b2b;
+      --text: #f4f2ed;
+      --muted: #a6a6a2;
+      --subtle: #6e6e69;
+      --red: #a31515;
+      --red-bright: #e12d2d;
+      --bone: #e7e2d6;
+      --max-width: 1240px;
+      --header-height: 78px;
+    }
 
-        .spec-line {
-            font-size: 0.8rem;
-            color: #666;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            font-family: monospace;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 4.5rem;
-            letter-spacing: 4px;
-            color: var(--text-color);
-            margin-bottom: 0.2rem;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 18px);
+    }
 
-        nav {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
 
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+    body.menu-open {
+      overflow: hidden;
+    }
 
-        nav a:hover {
-            color: var(--accent-red);
-        }
+    a {
+      color: inherit;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 5rem 5%;
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-            border-bottom: 1px solid var(--tactical-gray);
-        }
+    button,
+    input,
+    select {
+      font: inherit;
+    }
 
-        .hero h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            color: #fff;
-        }
+    button {
+      cursor: pointer;
+    }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            color: #aaa;
-        }
+    :focus-visible {
+      outline: 3px solid var(--red-bright);
+      outline-offset: 4px;
+    }
 
-        .story-section {
-            background-color: #080808;
-            border-bottom: 2px solid var(--accent-red);
-            padding: 5rem 5%;
-        }
+    .container {
+      width: min(100% - 2.5rem, var(--max-width));
+      margin-inline: auto;
+    }
 
-        .story-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .eyebrow {
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
 
-        .story-container h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--line);
+    }
 
-        .story-container p {
-            color: #ccc;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
+    .section-heading h2 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
 
-        .story-container p strong {
-            color: var(--accent-red);
-        }
+    .section-heading p {
+      max-width: 360px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: right;
+    }
 
-        .products-section {
-            padding: 5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      min-height: var(--header-height);
+      background: rgba(5, 5, 5, 0.93);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
 
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            border-bottom: 2px solid var(--tactical-gray);
-            padding-bottom: 1rem;
-            letter-spacing: 2px;
-        }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      min-height: var(--header-height);
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      color: var(--text);
+      text-decoration: none;
+      line-height: 0.82;
+    }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--tactical-gray);
-            padding: 2rem;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
+    .brand-main {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 2.15rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-red);
-        }
+    .brand-sub {
+      margin-top: 0.5rem;
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.54rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
 
-        .card.flagship {
-            border: 2px solid var(--accent-red);
-            background: linear-gradient(180deg, #161010 0%, var(--card-bg) 100%);
-        }
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.65rem;
+    }
 
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            background-color: #ffffff;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            border: 1px solid #222;
-            overflow: hidden;
-        }
+    .desktop-nav a,
+    .mobile-nav a {
+      color: var(--muted);
+      font-family: "DM Mono", monospace;
+      font-size: 0.71rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 160ms ease;
+    }
 
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: opacity 0.4s ease-in-out;
-        }
+    .desktop-nav a:hover,
+    .mobile-nav a:hover {
+      color: var(--text);
+    }
 
-        .image-container .back-img {
-            opacity: 0;
-        }
+    .header-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border: 1px solid var(--red);
+      background: var(--red);
+      color: #fff;
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      padding: 0.8rem 1.1rem;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
 
-        .card:hover .back-img {
-            opacity: 1;
-        }
+    .header-cta:hover,
+    .button:hover {
+      background: var(--red-bright);
+      border-color: var(--red-bright);
+      transform: translateY(-2px);
+    }
 
-        .card:hover .front-img {
-            opacity: 0;
-        }
+    .button-secondary {
+      border-color: #51514e;
+      background: transparent;
+      color: var(--text);
+    }
 
-        .image-placeholder {
-            width: 100%;
-            height: 350px;
-            background-color: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: #666;
-            font-family: monospace;
-            border: 1px dashed #333;
-            text-align: center;
-            padding: 1rem;
-        }
+    .button-secondary:hover {
+      border-color: var(--bone);
+      background: var(--bone);
+      color: #111;
+    }
 
-        .card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: #fff;
-            letter-spacing: 1px;
-        }
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+    }
 
-        .drop-status {
-            font-family: monospace;
-            font-size: 0.95rem;
-            color: #888;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    .mobile-nav {
+      display: none;
+      padding: 0 1.25rem 1.5rem;
+      border-top: 1px solid var(--line);
+    }
 
-        .description {
-            font-size: 0.95rem;
-            color: #aaa;
-            margin-bottom: 1.5rem;
-            min-height: 80px;
-        }
+    .mobile-nav.is-open {
+      display: grid;
+      gap: 1.25rem;
+    }
 
-        .features {
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-            color: #888;
-            list-style-type: square;
-            padding-left: 1.2rem;
-        }
+    .mobile-nav .button {
+      margin-top: 0.25rem;
+    }
 
-        .features li {
-            margin-bottom: 0.4rem;
-        }
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: min(760px, calc(100vh - var(--header-height)));
+      align-items: end;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.6) 52%, rgba(0, 0, 0, 0.28) 100%),
+        linear-gradient(0deg, rgba(5, 5, 5, 0.98) 0%, rgba(5, 5, 5, 0.03) 46%),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=2200&q=85") center/cover;
+      border-bottom: 1px solid var(--line);
+    }
 
-        .badge-coming {
-            display: inline-block;
-            background-color: rgba(201, 26, 26, 0.2);
-            color: #ff4d4d;
-            padding: 4px 10px;
-            font-family: monospace;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--accent-red);
-        }
+    .hero-content {
+      width: min(100% - 2.5rem, var(--max-width));
+      margin: 0 auto;
+      padding: clamp(5.5rem, 12vh, 9rem) 0 clamp(3.5rem, 8vh, 5.75rem);
+    }
 
-        .btn-disabled {
-            display: block;
-            background-color: #1a1a1a;
-            color: #555;
-            padding: 12px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.5rem;
-            letter-spacing: 1px;
-            text-align: center;
-            border: 2px solid #222;
-            cursor: not-allowed;
-        }
+    .hero h1 {
+      max-width: 850px;
+      margin: 0.7rem 0 1.25rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(4.7rem, 11vw, 10.2rem);
+      font-weight: 400;
+      letter-spacing: 0.015em;
+      line-height: 0.82;
+      text-transform: uppercase;
+    }
 
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            background-color: #000;
-            color: #555;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            font-family: 'Bebas Neue', sans-serif;
-        }
-    </style>
+    .hero h1 span {
+      color: var(--red-bright);
+    }
+
+    .hero-copy {
+      max-width: 575px;
+      color: #d4d1ca;
+      font-size: clamp(1rem, 1.65vw, 1.16rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .hero-index {
+      position: absolute;
+      right: max(1.25rem, calc((100% - var(--max-width)) / 2));
+      bottom: 2.2rem;
+      color: rgba(244, 242, 237, 0.48);
+      font-family: "DM Mono", monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.12em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .proof-bar {
+      border-bottom: 1px solid var(--line);
+      background: #080808;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .proof-item {
+      min-height: 118px;
+      display: grid;
+      place-content: center;
+      gap: 0.35rem;
+      padding: 1.5rem;
+      border-right: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .proof-item:last-child {
+      border-right: 0;
+    }
+
+    .proof-value {
+      color: var(--bone);
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .proof-label {
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: clamp(4.5rem, 9vw, 8rem) 0;
+    }
+
+    .anchor {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .anchor-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: start;
+    }
+
+    .anchor-title {
+      position: sticky;
+      top: 120px;
+    }
+
+    .anchor-title h2 {
+      margin-top: 0.5rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(4rem, 7vw, 7rem);
+      font-weight: 400;
+      letter-spacing: 0.035em;
+      line-height: 0.85;
+      text-transform: uppercase;
+    }
+
+    .anchor-copy {
+      max-width: 680px;
+    }
+
+    .anchor-copy p {
+      margin-bottom: 1.5rem;
+      color: #d0ceca;
+      font-size: clamp(1.1rem, 1.7vw, 1.34rem);
+      line-height: 1.65;
+    }
+
+    .anchor-copy strong {
+      color: var(--red-bright);
+      font-weight: 600;
+    }
+
+    .anchor-statement {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--bone);
+      font-family: "DM Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .anchor-statement::before {
+      width: 32px;
+      height: 2px;
+      flex: 0 0 auto;
+      background: var(--red);
+      content: "";
+    }
+
+    .capsules {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .capsule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .capsule {
+      position: relative;
+      display: flex;
+      min-height: 460px;
+      flex-direction: column;
+      justify-content: end;
+      overflow: hidden;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      border: 1px solid var(--line);
+      background: var(--surface-raised);
+      text-decoration: none;
+    }
+
+    .capsule::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.12) 70%);
+      content: "";
+      z-index: 1;
+    }
+
+    .capsule img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.08);
+      opacity: 0.72;
+      transition: transform 450ms ease, opacity 450ms ease;
+    }
+
+    .capsule:hover img {
+      transform: scale(1.045);
+      opacity: 0.86;
+    }
+
+    .capsule-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .capsule-number {
+      color: var(--red-bright);
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .capsule h3 {
+      margin: 0.5rem 0;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(3.1rem, 6vw, 5.5rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 0.85;
+      text-transform: uppercase;
+    }
+
+    .capsule p {
+      max-width: 420px;
+      color: #d2cfca;
+      font-size: 0.96rem;
+    }
+
+    .capsule-link {
+      display: inline-block;
+      margin-top: 1.3rem;
+      color: var(--bone);
+      font-family: "DM Mono", monospace;
+      font-size: 0.69rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .product-section {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-section--alt {
+      background: #080808;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .product-image {
+      position: relative;
+      aspect-ratio: 1 / 1.05;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: #e9e7e2;
+    }
+
+    .product-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 240ms ease, transform 300ms ease;
+    }
+
+    .product-image .back-image {
+      opacity: 0;
+    }
+
+    .product-card:hover .product-image .front-image,
+    .product-card:focus-within .product-image .front-image {
+      opacity: 0;
+    }
+
+    .product-card:hover .product-image .back-image,
+    .product-card:focus-within .product-image .back-image {
+      opacity: 1;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.025);
+    }
+
+    .product-card.no-back:hover .product-image .front-image,
+    .product-card.no-back:focus-within .product-image .front-image {
+      opacity: 1;
+    }
+
+    .product-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: clamp(1.3rem, 3vw, 2rem);
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.64rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .status {
+      color: #ee6868;
+    }
+
+    .product-card h3 {
+      margin: 0.85rem 0 0.65rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 0.035em;
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+
+    .product-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 0.55rem;
+      margin: 1.35rem 0 1.75rem;
+      color: #b8b6b0;
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+      list-style: none;
+    }
+
+    .spec-list li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: baseline;
+    }
+
+    .spec-list li::before {
+      color: var(--red-bright);
+      content: "///";
+    }
+
+    .product-card .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .process {
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .process-card {
+      min-height: 220px;
+      padding: 1.75rem;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .process-number {
+      color: var(--red-bright);
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+    }
+
+    .process-card h3 {
+      margin: 2.4rem 0 0.55rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 2.25rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .arsenal {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .arsenal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .arsenal-card {
+      padding: clamp(1.5rem, 4vw, 2.75rem);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(130deg, rgba(163, 21, 21, 0.08), transparent 45%),
+        #111;
+    }
+
+    .arsenal-card h3 {
+      margin: 1.1rem 0 0.65rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 400;
+      letter-spacing: 0.035em;
+      line-height: 0.88;
+      text-transform: uppercase;
+    }
+
+    .arsenal-card p {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .waitlist {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(163, 21, 21, 0.32), transparent 44%),
+        #090909;
+    }
+
+    .waitlist-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(2.5rem, 8vw, 7rem);
+      align-items: center;
+    }
+
+    .waitlist h2 {
+      margin: 0.65rem 0 1rem;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(4rem, 7vw, 7rem);
+      font-weight: 400;
+      letter-spacing: 0.035em;
+      line-height: 0.83;
+      text-transform: uppercase;
+    }
+
+    .waitlist-copy {
+      color: #cbc8c2;
+      font-size: 1.02rem;
+    }
+
+    .waitlist-note {
+      margin-top: 1.35rem;
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.03em;
+      line-height: 1.6;
+    }
+
+    .waitlist-form {
+      display: grid;
+      gap: 1rem;
+      padding: clamp(1.35rem, 4vw, 2.25rem);
+      border: 1px solid #39312f;
+      background: rgba(15, 15, 15, 0.9);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    label {
+      display: grid;
+      gap: 0.5rem;
+      color: #bbb8b1;
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    input,
+    select {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid #3a3a38;
+      border-radius: 0;
+      background: #080808;
+      color: var(--text);
+      padding: 0.75rem 0.85rem;
+    }
+
+    input::placeholder {
+      color: #646460;
+    }
+
+    input:hover,
+    select:hover {
+      border-color: #60605d;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 1px solid var(--red);
+    }
+
+    .form-success {
+      display: none;
+      padding: 1rem;
+      border: 1px solid #447046;
+      background: rgba(68, 112, 70, 0.14);
+      color: #bbddbb;
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .form-success.is-visible {
+      display: block;
+    }
+
+    footer {
+      padding: 2.5rem 0;
+      background: #000;
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 0.85;
+      text-transform: uppercase;
+    }
+
+    .footer-brand span {
+      display: block;
+      margin-top: 0.55rem;
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.13em;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 1.1rem;
+    }
+
+    .footer-links a,
+    .footer-legal {
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-legal {
+      margin-top: 1.75rem;
+      text-align: right;
+    }
+
+    @media (max-width: 800px) {
+      :root {
+        --header-height: 68px;
+      }
+
+      .desktop-nav,
+      .header-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .hero-index {
+        display: none;
+      }
+
+      .proof-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proof-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .proof-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .anchor-grid,
+      .waitlist-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .anchor-title {
+        position: static;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .section-heading p {
+        text-align: left;
+      }
+
+      .capsule-grid,
+      .product-grid,
+      .arsenal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .capsule {
+        min-height: 410px;
+      }
+
+      .footer-grid {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: start;
+      }
+
+      .footer-legal {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container,
+      .hero-content {
+        width: min(100% - 1.5rem, var(--max-width));
+      }
+
+      .hero-actions,
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .proof-item {
+        min-height: 96px;
+        padding: 1rem 0.6rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        aspect-ratio: 1 / 1.08;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Savage Division home">
+        <span class="brand-main">Savage Division</span>
+        <span class="brand-sub">Heavy Athletics & Apparel</span>
+      </a>
 
-    <header>
-        <div class="spec-line">Spec: Heavy Iron & Apparel</div>
-        <h1>Savage Division</h1>
-        <nav>
-            <a href="#anchor">The Anchor</a>
-            <a href="#panther">The Panther</a>
-            <a href="#medusa">The Medusa</a>
-            <a href="#gear">The Arsenal</a>
-        </nav>
-    </header>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#anchor">The Anchor</a>
+        <a href="#panther">Panther</a>
+        <a href="#medusa">Medusa</a>
+        <a href="#arsenal">Arsenal</a>
+      </nav>
 
-    <section class="hero">
-        <h2>Control the Controllables.</h2>
-        <p>Built for the people fighting to take control of their lives. We provide heavy-duty apparel to anchor your daily work. The grind is on you.</p>
+      <a class="header-cta" href="#waitlist">Join Drop 01</a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true">MENU</span>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#anchor">The Anchor</a>
+      <a href="#panther">The Panther</a>
+      <a href="#medusa">The Medusa</a>
+      <a href="#arsenal">The Arsenal</a>
+      <a class="button" href="#waitlist">Join Drop 01</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Drop 01 / Prototype Access Open</p>
+        <h1 id="hero-title">Control the <span>Controllables.</span></h1>
+        <p class="hero-copy">
+          Heavy-duty training apparel for people who build their lives through
+          discipline. The gear is ready. The work is on you.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#waitlist">Get Drop 01 Access</a>
+          <a class="button button-secondary" href="#panther">Explore the System</a>
+        </div>
+      </div>
+      <p class="hero-index">Savage Division / 01 — 2026</p>
     </section>
 
-    <!-- Dedicated Anchor Section Moved Below Hero -->
-    <section class="story-section" id="anchor">
-        <div class="story-container">
-            <h2>The Anchor</h2>
-            <p>At Savage Division, we know that motivation is a myth. When life gets chaotic, discipline is the only thing that keeps you anchored. We didn't build this brand for fitness influencers. <strong>We built it for the people fighting to take control of their lives.</strong></p>
-            <p>For the ones balancing late shifts, heavy coursework, and a family, the gym isn't just about looking good; it's the daily anchor. Prepping your meals isn't just a diet; it's a non-negotiable routine that keeps your week from falling apart.</p>
-            <p>We don't sell shortcuts. We sell the tools of discipline. We provide the heavy-duty gear. <strong>The work is on you.</strong></p>
+    <section class="proof-bar" aria-label="Savage Division principles">
+      <div class="container proof-grid">
+        <div class="proof-item">
+          <span class="proof-value">Heavyweight</span>
+          <span class="proof-label">Purpose-built fabrics</span>
         </div>
+        <div class="proof-item">
+          <span class="proof-value">Tested Fit</span>
+          <span class="proof-label">Training-first design</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-value">Drop 01</span>
+          <span class="proof-label">Small-batch release</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-value">No Filler</span>
+          <span class="proof-label">Only useful gear</span>
+        </div>
+      </div>
     </section>
 
-    <section class="products-section">
-        
-        <h2 class="section-title" id="panther">The Panther Capsule</h2>
-        
-        <div class="grid">
-            <div class="card flagship">
-                <div class="badge-coming">Prototype Phase • Drop 01</div>
-                <div class="image-container">
-                    <img src="mens-tee-front.png" alt="Front Mockup" class="front-img">
-                    <img src="mens-tee-back.png" alt="Back Mockup" class="back-img">
-                </div>
-                <h3>Max Heavyweight Pump Cover</h3>
-                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
-                <p class="description">The classic oversized boxy fit. Thick, heavy-weight cotton built with a high-yoke shoulder graphic. Available in Black, Hunter Green, Charcoal Grey, and Cardinal.</p>
-                <ul class="features">
-                    <li>Unisex Shaka Wear SHMHSS Blank</li>
-                    <li>High-Yoke Panther Shield Graphic</li>
-                    <li>Custom Savage Division Build</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
-            </div>
-
-            <div class="card flagship">
-                <div class="badge-coming">Prototype Phase • Drop 01</div>
-                <div class="image-container">
-                    <img src="mens-shorts.png" alt="Men's Shorts" class="front-img" style="opacity: 1;">
-                </div>
-                <h3>Heavy Pique Gym Shorts</h3>
-                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
-                <p class="description">Vintage-weight cotton pique built for heavy iron. Tactical 'SD' branding on the left leg to match the pump cover.</p>
-                <ul class="features">
-                    <li>American Apparel 2PQ Blank</li>
-                    <li>Breathable Heavyweight Texture</li>
-                    <li>Tactical 'SD' Monogram</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
-            </div>
+    <section class="anchor" id="anchor" aria-labelledby="anchor-title">
+      <div class="container anchor-grid">
+        <div class="anchor-title">
+          <p class="eyebrow">The operating principle</p>
+          <h2 id="anchor-title">The<br>Anchor.</h2>
         </div>
 
-        <h2 class="section-title" id="medusa" style="margin-top: 5rem;">The Medusa Capsule</h2>
-        
-        <div class="grid">
-            <div class="card flagship">
-                <div class="badge-coming">Prototype Phase • Drop 01</div>
-                <div class="image-container">
-                    <img src="womens-crop-front.png" alt="Front Mockup" class="front-img">
-                    <img src="womens-crop-back.png" alt="Back Mockup" class="back-img">
-                </div>
-                <h3>Faded Heavy Crop Tee</h3>
-                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
-                <p class="description">A structured, garment-dyed combed cotton crop that drapes perfectly. Minimal front 'SD' branding with the massive Chain-Link Medusa crest on the back.</p>
-                <ul class="features">
-                    <li>Women's AS Colour 4062F Blank</li>
-                    <li>Boxy Streetwear Crop Silhouette</li>
-                    <li>Chain-Link Medusa Back Graphic</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
-            </div>
-
-            <div class="card flagship">
-                <div class="badge-coming">Prototype Phase • Drop 01</div>
-                <div class="image-container">
-                    <img src="womens-shorts.png" alt="Women's Shorts" class="front-img" style="opacity: 1;">
-                </div>
-                <h3>Interval 3" Compression Short</h3>
-                <div class="drop-status">STATUS: DIALING IN THE FIT</div>
-                <p class="description">Built to survive the squat test. Maximum opacity heavy compression blend featuring tactical 'SD' branding on the left thigh.</p>
-                <ul class="features">
-                    <li>Women's Sport-Tek LST475 Blank</li>
-                    <li>100% Opaque Squat-Proof Poly/Spandex</li>
-                    <li>Flatlock Seams for Zero Blowout</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon — Drop Date TBA</div>
-            </div>
+        <div class="anchor-copy">
+          <p>
+            Motivation fades. Discipline stays. When life gets chaotic, the
+            routines you keep are what hold you together.
+          </p>
+          <p>
+            Savage Division is for the people balancing late shifts, coursework,
+            family, and the daily decision to show up anyway. Training is not
+            just aesthetic. <strong>It is the anchor.</strong>
+          </p>
+          <p>
+            We do not sell shortcuts. We make the gear that supports the work:
+            durable, intentional, and built for repeated use.
+          </p>
+          <div class="anchor-statement">The gear is ours. The work is yours.</div>
         </div>
-
-        <!-- Hard Gear Section Restored -->
-        <h2 class="section-title" id="gear" style="margin-top: 5rem;">The Extended Arsenal (Coming Later)</h2>
-        
-        <div class="grid">
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Iron Division 10mm Lever Belt</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Built to handle the heaviest loads. Lock in your core and protect your spine when you're moving serious weight.</p>
-                <ul class="features">
-                    <li>IPF-approved competition specs</li>
-                    <li>Rapid-locking matte steel lever</li>
-                    <li>Premium double suede finish</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon</div>
-            </div>
-
-            <div class="card">
-                <div class="image-placeholder">[Coming Soon]</div>
-                <h3>Death-Grip Figure 8 Straps</h3>
-                <div class="drop-status">STATUS: R&amp;D PHASE</div>
-                <p class="description">Don't let your grip fail before your back does. These literally tie you to the bar so you can pull until failure.</p>
-                <ul class="features">
-                    <li>1,000+ lb weight capacity rating</li>
-                    <li>Thick, reinforced cotton webbing</li>
-                    <li>Locks instantly, no wrap time</li>
-                </ul>
-                <div class="btn-disabled">Coming Soon</div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Savage Division. Built for the grind.</p>
-    </footer>
+    <section class="capsules" aria-labelledby="capsules-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="capsules-title">Choose Your Division</h2>
+          <p>Two systems. One standard: gear with a job to do.</p>
+        </div>
 
-</body>
-</html>
+        <div class="capsule-grid">
+          <a class="capsule" href="#panther">
+            <img
+              src="mens-tee-front.png"
+              alt="Savage Division Panther capsule heavyweight pump cover"
+              loading="lazy"
+              onerror="this.style.display='none';"
+            >
+            <div class="capsule-content">
+              <p class="capsule-number">Division 01 / Unisex</p>
+              <h3>The Panther</h3>
+              <p>Heavyweight layers designed for warm-ups, hard sessions, and recovery.</p>
+              <span class="capsule-link">Explore Panther →</span>
+            </div>
+          </a>
+
+          <a class="capsule" href="#medusa">
+            <img
+              src="womens-crop-front.png"
+              alt="Savage Division Medusa capsule crop tee"
+              loading="lazy"
+              onerror="this.style.display='none';"
+            >
+            <div class="capsule-content">
+              <p class="capsule-number">Division 02 / Women's</p>
+              <h3>The Medusa</h3>
+              <p>Structured silhouettes designed to move hard and wear beyond the gym.</p>
+              <span class="capsule-link">Explore Medusa →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" id="panther" aria-labelledby="panther-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="panther-title">The Panther Capsule</h2>
+          <p>Heavy silhouettes. Utility graphics. Built around the warm-up and the work set.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                class="front-image"
+                src="mens-tee-front.png"
+                alt="Max Heavyweight Pump Cover front view"
+                loading="lazy"
+              >
+              <img
+                class="back-image"
+                src="mens-tee-back.png"
+                alt="Max Heavyweight Pump Cover back view"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-copy">
+              <div class="product-meta">
+                <span>Panther / 01</span>
+                <span class="status">Prototype Phase</span>
+              </div>
+              <h3>Max Heavyweight Pump Cover</h3>
+              <p>
+                An oversized, boxy layer built around a substantial cotton blank
+                and a high-yoke Panther Shield graphic.
+              </p>
+              <ul class="spec-list">
+                <li>Unisex Shaka Wear SHMHSS base</li>
+                <li>Oversized boxy silhouette</li>
+                <li>High-yoke Panther Shield graphic</li>
+                <li>Black, Hunter Green, Charcoal, Cardinal</li>
+              </ul>
+              <a class="button" href="#waitlist" data-product="Max Heavyweight Pump Cover">
+                Request Early Access
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card no-back">
+            <div class="product-image">
+              <img
+                class="front-image"
+                src="mens-shorts.png"
+                alt="Heavy Pique Gym Shorts"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-copy">
+              <div class="product-meta">
+                <span>Panther / 02</span>
+                <span class="status">Prototype Phase</span>
+              </div>
+              <h3>Heavy Pique Gym Shorts</h3>
+              <p>
+                Vintage-weight cotton pique shorts with a textured hand feel and
+                a restrained tactical SD monogram.
+              </p>
+              <ul class="spec-list">
+                <li>American Apparel 2PQ base</li>
+                <li>Heavy cotton-pique texture</li>
+                <li>Tactical SD left-leg monogram</li>
+                <li>Designed as a matching set</li>
+              </ul>
+              <a class="button" href="#waitlist" data-product="Heavy Pique Gym Shorts">
+                Request Early Access
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section--alt" id="medusa" aria-labelledby="medusa-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="medusa-title">The Medusa Capsule</h2>
+          <p>Structured women’s training essentials built for movement and repeat wear.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                class="front-image"
+                src="womens-crop-front.png"
+                alt="Faded Heavy Crop Tee front view"
+                loading="lazy"
+              >
+              <img
+                class="back-image"
+                src="womens-crop-back.png"
+                alt="Faded Heavy Crop Tee back view"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-copy">
+              <div class="product-meta">
+                <span>Medusa / 01</span>
+                <span class="status">Prototype Phase</span>
+              </div>
+              <h3>Faded Heavy Crop Tee</h3>
+              <p>
+                A garment-dyed cotton crop with a structured drape, minimal front
+                mark, and a Chain-Link Medusa crest across the back.
+              </p>
+              <ul class="spec-list">
+                <li>Women's AS Colour 4062F base</li>
+                <li>Boxy streetwear crop silhouette</li>
+                <li>Garment-dyed combed cotton</li>
+                <li>Chain-Link Medusa back graphic</li>
+              </ul>
+              <a class="button" href="#waitlist" data-product="Faded Heavy Crop Tee">
+                Request Early Access
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card no-back">
+            <div class="product-image">
+              <img
+                class="front-image"
+                src="womens-shorts.png"
+                alt="Interval 3 inch Compression Short"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-copy">
+              <div class="product-meta">
+                <span>Medusa / 02</span>
+                <span class="status">Prototype Phase</span>
+              </div>
+              <h3>Interval 3-Inch Compression Short</h3>
+              <p>
+                A compact compression short designed for lower-body sessions,
+                with flat seams and a high-recovery stretch fabric target.
+              </p>
+              <ul class="spec-list">
+                <li>Women's Sport-Tek LST475 base</li>
+                <li>3-inch inseam concept</li>
+                <li>Flatlock seam construction target</li>
+                <li>Tactical SD thigh mark</li>
+              </ul>
+              <a class="button" href="#waitlist" data-product="Interval 3-Inch Compression Short">
+                Request Early Access
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="process-title">Built in Public</h2>
+          <p>Drop 01 is designed with feedback, samples, wear testing, and refinement.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <p class="process-number">01 / Prototype</p>
+            <h3>Dial the Fit</h3>
+            <p>We refine silhouette, proportions, fabric hand feel, and print placement before release.</p>
+          </article>
+
+          <article class="process-card">
+            <p class="process-number">02 / Wear Test</p>
+            <h3>Put It Through Work</h3>
+            <p>Real training sessions inform changes before production decisions are final.</p>
+          </article>
+
+          <article class="process-card">
+            <p class="process-number">03 / Drop 01</p>
+            <h3>Release With Intent</h3>
+            <p>Small-batch production, early access for the Division List, no unnecessary filler.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="arsenal" id="arsenal" aria-labelledby="arsenal-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="arsenal-title">The Extended Arsenal</h2>
+          <p>Future equipment concepts. Built only after the apparel system is proven.</p>
+        </div>
+
+        <div class="arsenal-grid">
+          <article class="arsenal-card">
+            <p class="eyebrow">R&D / Future Release</p>
+            <h3>Iron Division Lever Belt</h3>
+            <p>
+              A future lifting-belt concept focused on a rigid feel, secure lever
+              closure, durable leather construction, and a dialed-in fit range.
+            </p>
+          </article>
+
+          <article class="arsenal-card">
+            <p class="eyebrow">R&D / Future Release</p>
+            <h3>Death-Grip Figure 8 Straps</h3>
+            <p>
+              A future figure-8 strap concept focused on reinforced webbing,
+              secure bar contact, and dependable construction for pulling work.
+            </p>
+          </arti
