@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#050505">
   <meta
     name="description"
-    content="Savage Division makes heavy-duty training apparel for people who control the controllables. Join the Drop 01 early-access list."
+    content="Savage Division makes heavy-duty training apparel for people who control the controllables. Explore the Predator and Medusa pump covers."
   >
   <meta property="og:title" content="Savage Division | Heavy Athletics & Apparel">
   <meta
@@ -976,6 +976,10 @@
         aspect-ratio: 1 / 1.08;
       }
     }
+  .garment-views { display: grid; grid-template-columns: 3fr 2fr; align-items: center; background: white; color: #333; }
+    .garment-views img { display: block; width: 100%; height: auto; }
+    .garment-views figcaption { padding-bottom: .75rem; text-align: center; font-size: .875rem; }
+    @media (max-width: 600px) { .garment-views { grid-template-columns: 1fr; } }
   </style>
 </head>
 
@@ -989,12 +993,12 @@
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#anchor">The Anchor</a>
-        <a href="#panther">Panther</a>
+        <a href="#panther">Predator</a>
         <a href="#medusa">Medusa</a>
         <a href="#arsenal">Arsenal</a>
       </nav>
 
-      <a class="header-cta" href="#waitlist">Join Drop 01</a>
+      <a class="header-cta" href="#drop-001">View Drop 001</a>
 
       <button
         class="menu-toggle"
@@ -1009,25 +1013,24 @@
 
     <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
       <a href="#anchor">The Anchor</a>
-      <a href="#panther">The Panther</a>
+      <a href="#panther">Predator</a>
       <a href="#medusa">The Medusa</a>
       <a href="#arsenal">The Arsenal</a>
-      <a class="button" href="#waitlist">Join Drop 01</a>
+      <a class="button" href="#drop-001">View Drop 001</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <p class="eyebrow">Drop 01 / Prototype Access Open</p>
+        <p class="eyebrow">Drop 01 / Pump Covers</p>
         <h1 id="hero-title">Control the <span>Controllables.</span></h1>
         <p class="hero-copy">
           Heavy-duty training apparel for people who build their lives through
           discipline. The gear is ready. The work is on you.
         </p>
         <div class="hero-actions">
-          <a class="button" href="#waitlist">Get Drop 01 Access</a>
-          <a class="button button-secondary" href="#panther">Explore the System</a>
+          <a class="button" href="#drop-001">Explore Drop 001</a>
         </div>
       </div>
       <p class="hero-index">Savage Division / 01 — 2026</p>
@@ -1080,203 +1083,26 @@
       </div>
     </section>
 
-    <section class="capsules" aria-labelledby="capsules-title">
+    <section class="product-section" id="drop-001" aria-labelledby="drop-title">
       <div class="container">
-        <div class="section-heading">
-          <h2 id="capsules-title">Choose Your Division</h2>
-          <p>Two systems. One standard: gear with a job to do.</p>
-        </div>
-
-        <div class="capsule-grid">
-          <a class="capsule" href="#panther">
-            <img
-              src="mens-tee-front.png"
-              alt="Savage Division Panther capsule heavyweight pump cover"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            >
-            <div class="capsule-content">
-              <p class="capsule-number">Division 01 / Unisex</p>
-              <h3>The Panther</h3>
-              <p>Heavyweight layers designed for warm-ups, hard sessions, and recovery.</p>
-              <span class="capsule-link">Explore Panther →</span>
-            </div>
-          </a>
-
-          <a class="capsule" href="#medusa">
-            <img
-              src="womens-crop-front.png"
-              alt="Savage Division Medusa capsule crop tee"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            >
-            <div class="capsule-content">
-              <p class="capsule-number">Division 02 / Women's</p>
-              <h3>The Medusa</h3>
-              <p>Structured silhouettes designed to move hard and wear beyond the gym.</p>
-              <span class="capsule-link">Explore Medusa →</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-section" id="panther" aria-labelledby="panther-title">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="panther-title">The Panther Capsule</h2>
-          <p>Heavy silhouettes. Utility graphics. Built around the warm-up and the work set.</p>
-        </div>
-
+        <div class="section-heading"><h2 id="drop-title">Drop 001 Pump Covers</h2></div>
         <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image">
-              <img
-                class="front-image"
-                src="mens-tee-front.png"
-                alt="Max Heavyweight Pump Cover front view"
-                loading="lazy"
-              >
-              <img
-                class="back-image"
-                src="mens-tee-back.png"
-                alt="Max Heavyweight Pump Cover back view"
-                loading="lazy"
-              >
-            </div>
-
+          <article class="product-card" id="panther">
+            <div class="garment-views"><figure><img src="predator-back.webp" width="550" height="430" loading="lazy" alt="Predator pump cover, back view"><figcaption>Back</figcaption></figure><figure><img src="predator-front.webp" width="550" height="430" loading="lazy" alt="Predator pump cover, front view"><figcaption>Front</figcaption></figure></div>
             <div class="product-copy">
-              <div class="product-meta">
-                <span>Panther / 01</span>
-                <span class="status">Prototype Phase</span>
-              </div>
-              <h3>Max Heavyweight Pump Cover</h3>
-              <p>
-                An oversized, boxy layer built around a substantial cotton blank
-                and a high-yoke Panther Shield graphic.
-              </p>
-              <ul class="spec-list">
-                <li>Unisex Shaka Wear SHMHSS base</li>
-                <li>Oversized boxy silhouette</li>
-                <li>High-yoke Panther Shield graphic</li>
-                <li>Black, Hunter Green, Charcoal, Cardinal</li>
-              </ul>
-              <a class="button" href="#waitlist" data-product="Max Heavyweight Pump Cover">
-                Request Early Access
-              </a>
+              <p class="product-meta">SPEC-01</p>
+              <h3>Predator Pump Cover</h3>
+              <p>A panther grips a loaded barbell across the back. The front carries the SD chest crest.</p>
+              <ul class="spec-list"><li>Unisex heavyweight oversized tee</li><li>Black · S, M, L, XL, 2XL</li></ul>
             </div>
           </article>
-
-          <article class="product-card no-back">
-            <div class="product-image">
-              <img
-                class="front-image"
-                src="mens-shorts.png"
-                alt="Heavy Pique Gym Shorts"
-                loading="lazy"
-              >
-            </div>
-
+          <article class="product-card" id="medusa">
+            <div class="garment-views"><figure><img src="medusa-back.webp" width="550" height="430" loading="lazy" alt="Medusa pump cover, back view"><figcaption>Back</figcaption></figure><figure><img src="medusa-front.webp" width="550" height="430" loading="lazy" alt="Medusa pump cover, front view"><figcaption>Front</figcaption></figure></div>
             <div class="product-copy">
-              <div class="product-meta">
-                <span>Panther / 02</span>
-                <span class="status">Prototype Phase</span>
-              </div>
-              <h3>Heavy Pique Gym Shorts</h3>
-              <p>
-                Vintage-weight cotton pique shorts with a textured hand feel and
-                a restrained tactical SD monogram.
-              </p>
-              <ul class="spec-list">
-                <li>American Apparel 2PQ base</li>
-                <li>Heavy cotton-pique texture</li>
-                <li>Tactical SD left-leg monogram</li>
-                <li>Designed as a matching set</li>
-              </ul>
-              <a class="button" href="#waitlist" data-product="Heavy Pique Gym Shorts">
-                Request Early Access
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-section product-section--alt" id="medusa" aria-labelledby="medusa-title">
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="medusa-title">The Medusa Capsule</h2>
-          <p>Structured women’s training essentials built for movement and repeat wear.</p>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image">
-              <img
-                class="front-image"
-                src="womens-crop-front.png"
-                alt="Faded Heavy Crop Tee front view"
-                loading="lazy"
-              >
-              <img
-                class="back-image"
-                src="womens-crop-back.png"
-                alt="Faded Heavy Crop Tee back view"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-copy">
-              <div class="product-meta">
-                <span>Medusa / 01</span>
-                <span class="status">Prototype Phase</span>
-              </div>
-              <h3>Faded Heavy Crop Tee</h3>
-              <p>
-                A garment-dyed cotton crop with a structured drape, minimal front
-                mark, and a Chain-Link Medusa crest across the back.
-              </p>
-              <ul class="spec-list">
-                <li>Women's AS Colour 4062F base</li>
-                <li>Boxy streetwear crop silhouette</li>
-                <li>Garment-dyed combed cotton</li>
-                <li>Chain-Link Medusa back graphic</li>
-              </ul>
-              <a class="button" href="#waitlist" data-product="Faded Heavy Crop Tee">
-                Request Early Access
-              </a>
-            </div>
-          </article>
-
-          <article class="product-card no-back">
-            <div class="product-image">
-              <img
-                class="front-image"
-                src="womens-shorts.png"
-                alt="Interval 3 inch Compression Short"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-copy">
-              <div class="product-meta">
-                <span>Medusa / 02</span>
-                <span class="status">Prototype Phase</span>
-              </div>
-              <h3>Interval 3-Inch Compression Short</h3>
-              <p>
-                A compact compression short designed for lower-body sessions,
-                with flat seams and a high-recovery stretch fabric target.
-              </p>
-              <ul class="spec-list">
-                <li>Women's Sport-Tek LST475 base</li>
-                <li>3-inch inseam concept</li>
-                <li>Flatlock seam construction target</li>
-                <li>Tactical SD thigh mark</li>
-              </ul>
-              <a class="button" href="#waitlist" data-product="Interval 3-Inch Compression Short">
-                Request Early Access
-              </a>
+              <p class="product-meta">SPEC-02</p>
+              <h3>Medusa Pump Cover</h3>
+              <p>A sculpted Medusa framed by serpents above “Power Needs No Permission.” The front carries the SD chest crest.</p>
+              <ul class="spec-list"><li>Unisex heavyweight oversized tee</li><li>Black · S, M, L, XL, 2XL</li></ul>
             </div>
           </article>
         </div>
@@ -1336,4 +1162,21 @@
               A future figure-8 strap concept focused on reinforced webbing,
               secure bar contact, and dependable construction for pulling work.
             </p>
-          </arti
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    function setMenu(open) {
+      menu.classList.toggle("is-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    }
+    menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
+    menu.addEventListener("click", event => { if (event.target.closest("a")) setMenu(false); });
+  </script>
+</body>
+</html>
